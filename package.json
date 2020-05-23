@@ -2,6 +2,7 @@
   "name": "burger-builder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sirius97.github.io/Burger-Builder-App/",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "axios": "^0.19.2",
@@ -53,7 +54,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -96,5 +99,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
